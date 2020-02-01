@@ -9,11 +9,24 @@ class Freecell{
     private static ArrayList<String> pileH = new ArrayList<>();
     private static ArrayList<String> pileS = new ArrayList<>();
 
+    /*
     //9 Columns
     private static ArrayList<String> column1 = new ArrayList<>(List.of("c9","h5","dQ","d6","c7","s8","hQ"));
     private static ArrayList<String> column2 = new ArrayList<>(List.of("s5","c2","s7","s2","cQ","c5"));
     private static ArrayList<String> column3 = new ArrayList<>(List.of("h6","sJ","d2","hX","d5","cA","hA"));
     private static ArrayList<String> column4 = new ArrayList<>(List.of("dK","cJ","cX","hJ","c4","c8"));
+    private static ArrayList<String> column5 = new ArrayList<>(List.of("d9","dA","h7","d8","s3","sX","h2"));
+    private static ArrayList<String> column6 = new ArrayList<>(List.of("dX","s6","c3","s9","d7","dJ"));
+    private static ArrayList<String> column7 = new ArrayList<>(List.of("h8","sA","sK","hK","c6","s4","h9"));
+    private static ArrayList<String> column8 = new ArrayList<>(List.of("d3","cK","sQ","h4","h3","d4"));
+    private static ArrayList<String> column9 = new ArrayList<>();
+    */
+
+    //For testing purposes only
+    private static ArrayList<String> column1 = new ArrayList<>(List.of("cK","cQ","cJ","cX","c9","c8","c7","c6","c5","c4","c3","c2","cA"));
+    private static ArrayList<String> column2 = new ArrayList<>(List.of("sA"));
+    private static ArrayList<String> column3 = new ArrayList<>(List.of("s2","s3","s4","s5","s6","s7","s8","s9"));
+    private static ArrayList<String> column4 = new ArrayList<>(List.of("dK","hK","hQ","hJ","hX"));
     private static ArrayList<String> column5 = new ArrayList<>(List.of("d9","dA","h7","d8","s3","sX","h2"));
     private static ArrayList<String> column6 = new ArrayList<>(List.of("dX","s6","c3","s9","d7","dJ"));
     private static ArrayList<String> column7 = new ArrayList<>(List.of("h8","sA","sK","hK","c6","s4","h9"));
@@ -78,16 +91,16 @@ class Freecell{
 
     public static void makeSelection(){
         if(firstList.equals("1") && target.equals("c")){
-            checkMove(column1,element,pileC);
+            checkPile(column1,element,pileC);
             moveMore(column1,element,pileC);
         }else if (firstList.equals("1") && target.equals("d")){
-            checkMove(column1,element,pileD);
+            checkPile(column1,element,pileD);
             moveMore(column1,element,pileD);
         }else if (firstList.equals("1") && target.equals("h")){
-            checkMove(column1,element,pileH);
+            checkPile(column1,element,pileH);
             moveMore(column1,element,pileH);
         }else if (firstList.equals("1") && target.equals("s")){
-            checkMove(column1,element,pileS);
+            checkPile(column1,element,pileS);
             moveMore(column1,element,pileS);
         }else if (firstList.equals("1") && target.equals("2")){
             checkMove(column1,element,column2);
@@ -114,16 +127,16 @@ class Freecell{
             checkMove(column1,element,column9);
             moveMore(column1,element,column9);
         }else if (firstList.equals("2") && target.equals("c")){
-            checkMove(column2,element,pileC);
+            checkPile(column2,element,pileC);
             moveMore(column2,element,pileC);
         }else if (firstList.equals("2") && target.equals("d")){
-            checkMove(column2,element,pileD);
+            checkPile(column2,element,pileD);
             moveMore(column2,element,pileD);
         }else if (firstList.equals("2") && target.equals("h")){
-            checkMove(column2,element,pileH);
+            checkPile(column2,element,pileH);
             moveMore(column2,element,pileH);
         }else if (firstList.equals("2") && target.equals("s")){
-            checkMove(column2,element,pileS);
+            checkPile(column2,element,pileS);
             moveMore(column2,element,pileS);
         }else if (firstList.equals("2") && target.equals("1")){
             checkMove(column2,element,column1);
@@ -150,16 +163,16 @@ class Freecell{
             checkMove(column2,element,column9);
             moveMore(column2,element,column9);
         }else if (firstList.equals("3") && target.equals("c")){
-            checkMove(column3,element,pileC);
+            checkPile(column3,element,pileC);
             moveMore(column3,element,pileC);
         }else if (firstList.equals("3") && target.equals("d")){
-            checkMove(column3,element,pileD);
+            checkPile(column3,element,pileD);
             moveMore(column3,element,pileD);
         }else if (firstList.equals("3") && target.equals("h")){
-            checkMove(column3,element,pileH);
+            checkPile(column3,element,pileH);
             moveMore(column3,element,pileH);
         }else if (firstList.equals("3") && target.equals("s")){
-            checkMove(column3,element,pileS);
+            checkPile(column3,element,pileS);
             moveMore(column3,element,pileS);
         }else if (firstList.equals("3") && target.equals("1")){
             checkMove(column3,element,column1);
@@ -186,16 +199,16 @@ class Freecell{
             checkMove(column3,element,column9);
             moveMore(column3,element,column9);
         }else if (firstList.equals("4") && target.equals("c")){
-            checkMove(column4,element,pileC);
+            checkPile(column4,element,pileC);
             moveMore(column4,element,pileC);
         }else if (firstList.equals("4") && target.equals("d")){
-            checkMove(column4,element,pileD);
+            checkPile(column4,element,pileD);
             moveMore(column4,element,pileD);
         }else if (firstList.equals("4") && target.equals("h")){
-            checkMove(column4,element,pileH);
+            checkPile(column4,element,pileH);
             moveMore(column4,element,pileH);
         }else if (firstList.equals("4") && target.equals("s")){
-            checkMove(column4,element,pileS);
+            checkPile(column4,element,pileS);
             moveMore(column4,element,pileS);
         }else if (firstList.equals("4") && target.equals("1")){
             checkMove(column4,element,column1);
@@ -222,16 +235,16 @@ class Freecell{
             checkMove(column4,element,column9);
             moveMore(column4,element,column9);
         }else if (firstList.equals("5") && target.equals("c")){
-            checkMove(column5,element,pileC);
+            checkPile(column5,element,pileC);
             moveMore(column5,element,pileC);
         }else if (firstList.equals("5") && target.equals("d")){
-            checkMove(column5,element,pileD);
+            checkPile(column5,element,pileD);
             moveMore(column5,element,pileD);
         }else if (firstList.equals("5") && target.equals("h")){
-            checkMove(column5,element,pileH);
+            checkPile(column5,element,pileH);
             moveMore(column5,element,pileH);
         }else if (firstList.equals("5") && target.equals("s")){
-            checkMove(column5,element,pileS);
+            checkPile(column5,element,pileS);
             moveMore(column5,element,pileS);
         }else if (firstList.equals("5") && target.equals("1")){
             checkMove(column5,element,column1);
@@ -258,16 +271,16 @@ class Freecell{
             checkMove(column5,element,column9);
             moveMore(column5,element,column9);
         }else if (firstList.equals("6") && target.equals("c")){
-            checkMove(column6,element,pileC);
+            checkPile(column6,element,pileC);
             moveMore(column6,element,pileC);
         }else if (firstList.equals("6") && target.equals("d")){
-            checkMove(column6,element,pileD);
+            checkPile(column6,element,pileD);
             moveMore(column6,element,pileD);
         }else if (firstList.equals("6") && target.equals("h")){
-            checkMove(column6,element,pileH);
+            checkPile(column6,element,pileH);
             moveMore(column6,element,pileH);
         }else if (firstList.equals("6") && target.equals("s")){
-            checkMove(column6,element,pileS);
+            checkPile(column6,element,pileS);
             moveMore(column6,element,pileS);
         }else if (firstList.equals("6") && target.equals("1")){
             checkMove(column6,element,column1);
@@ -294,16 +307,16 @@ class Freecell{
             checkMove(column6,element,column9);
             moveMore(column6,element,column9);
         }else if (firstList.equals("7") && target.equals("c")){
-            checkMove(column7,element,pileC);
+            checkPile(column7,element,pileC);
             moveMore(column7,element,pileC);
         }else if (firstList.equals("7") && target.equals("d")){
-            checkMove(column7,element,pileD);
+            checkPile(column7,element,pileD);
             moveMore(column7,element,pileD);
         }else if (firstList.equals("7") && target.equals("h")){
-            checkMove(column7,element,pileH);
+            checkPile(column7,element,pileH);
             moveMore(column7,element,pileH);
         }else if (firstList.equals("7") && target.equals("s")){
-            checkMove(column7,element,pileS);
+            checkPile(column7,element,pileS);
             moveMore(column7,element,pileS);
         }else if (firstList.equals("7") && target.equals("1")){
             checkMove(column7,element,column1);
@@ -330,16 +343,16 @@ class Freecell{
             checkMove(column7,element,column9);
             moveMore(column7,element,column9);
         }else if (firstList.equals("8") && target.equals("c")){
-            checkMove(column8,element,pileC);
+            checkPile(column8,element,pileC);
             moveMore(column8,element,pileC);
         }else if (firstList.equals("8") && target.equals("d")){
-            checkMove(column8,element,pileD);
+            checkPile(column8,element,pileD);
             moveMore(column8,element,pileD);
         }else if (firstList.equals("8") && target.equals("h")){
-            checkMove(column8,element,pileH);
+            checkPile(column8,element,pileH);
             moveMore(column8,element,pileH);
         }else if (firstList.equals("8") && target.equals("s")){
-            checkMove(column8,element,pileS);
+            checkPile(column8,element,pileS);
             moveMore(column8,element,pileS);
         }else if (firstList.equals("8") && target.equals("1")){
             checkMove(column8,element,column1);
@@ -366,16 +379,16 @@ class Freecell{
             checkMove(column8,element,column9);
             moveMore(column8,element,column9);
         }else if (firstList.equals("9") && target.equals("c")){
-            checkMove(column9,element,pileC);
+            checkPile(column9,element,pileC);
             moveMore(column9,element,pileC);
         }else if (firstList.equals("9") && target.equals("d")){
-            checkMove(column9,element,pileD);
+            checkPile(column9,element,pileD);
             moveMore(column9,element,pileD);
         }else if (firstList.equals("9") && target.equals("h")){
-            checkMove(column9,element,pileH);
+            checkPile(column9,element,pileH);
             moveMore(column9,element,pileH);
         }else if (firstList.equals("9") && target.equals("s")){
-            checkMove(column9,element,pileS);
+            checkPile(column9,element,pileS);
             moveMore(column9,element,pileS);
         }else if (firstList.equals("9") && target.equals("1")){
             checkMove(column9,element,column1);
@@ -448,10 +461,7 @@ class Freecell{
             if(firstback.compareTo(secondback) == 1){
                 status = true; // Compare last card is larger than move card by exactly one points
                 continue;
-            }else if(firstback.compareTo(secondback) > 6 && firstback.compareTo(secondback) < 8 ){
-                status = true; //Compare Q and J
-                continue;
-            }else if (firstback.compareTo(secondback) > 30 && firstback.compareTo(secondback) < 32){
+            }else if(firstback.compareTo(secondback) > 30 && firstback.compareTo(secondback) < 32){
                 status = true; //Compare X and 9
                 continue;
             }else if (firstback.compareTo(secondback) > -7 && firstback.compareTo(secondback) < -5){
@@ -474,38 +484,97 @@ class Freecell{
     }
 
     public static void checkPile(ArrayList<String> list1, String string, ArrayList<String> list2){
+        String str0 = String.valueOf(string.charAt(0)); // element index 0
+        String str1 = String.valueOf(string.charAt(1)); // element index 1
+        int index = list1.indexOf(string);
         if(list2.size() == 0){
             //Add A into respective pile
-        }else if(){
+            if(target.equals("c") && str0.equals("c") && str1.equals("A")){
+                status = true;
+            }else if(target.equals("d") && str0.equals("d") && str1.equals("A")){
+                status = true;
+            }else if(target.equals("h") && str0.equals("h") && str1.equals("A")){
+                status = true;
+            }else if(target.equals("s") && str0.equals("s") && str1.equals("A")){
+                status = true;
+            }else if (!(target.equals("c") || target.equals("d")|| target.equals("h")|| target.equals("s"))){
+                status = true;
+            }
+        }else{
             // If list2 got element inside, get the latest element and compare with the element we want to add and respective pile,
             //If the moveCard exactly one bigger than the latest element, add it into the respective pile
+            String last = list2.get(list2.size()-1); 
+            String str2 = String.valueOf(last.charAt(1)); //item in target column
+            if(str1.equals("2") && str2.equals("A")){
+                status = true;
+            }else if(str1.equals("X") && str2.equals("9")){
+                status = true;
+            }else if(str1.equals("J") && str2.equals("X")){
+                status = true;
+            }else if(str1.equals("Q") && str2.equals("J")){
+                status = true;
+            }else if (str1.equals("K") && str2.equals("Q")){
+                status = true;
+            }else if (str2.compareTo(str1) == -1){
+                status = true;
+            }
         }
+        /*
+        for(int i = index; i < list1.size()-1; i++){
+            String first = String.valueOf(list1.get(i));
+            String second = String.valueOf(list1.get(i+1));
+            String firstback = String.valueOf(first.charAt(1));
+            String secondback = String.valueOf(second.charAt(1));
+            if(firstback.compareTo(secondback) == 1){
+                status = true; // Compare last card is larger than move card by exactly one points
+                continue;
+            }else if(firstback.compareTo(secondback) > 30 && firstback.compareTo(secondback) < 32){
+                status = true; //Compare X and 9
+                continue;
+            }else if (firstback.compareTo(secondback) > -7 && firstback.compareTo(secondback) < -5){
+                status = true; //Compare K and Q
+                continue;
+            }else if (firstback.compareTo(secondback) > -16 && firstback.compareTo(secondback) < -13){
+                status = true; //Compare 2 and A(-15) ; Compare J and X(-14)
+                continue;
+            }else if (firstback.compareTo(secondback) == 1){
+                status = false;
+                break; 
+            }else if (firstback.compareTo(secondback) < 0){
+                status = false;
+                break;
+            }else if (firstback.compareTo(secondback) > 1){
+                status = false;
+                break;
+            }
+        }
+        */
     }
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        deepShuffle();
+        //deepShuffle();
         printAll();
-        String end = " ";
+        //String end = " ";
         System.out.println("-----------------------------------------");
         do{
             try{
-                System.out.print("Enter the source column: ");
+                System.out.print("Command > ");
                 firstList = input.next();
-                System.out.print("Enter the element in the source column: ");
+                //System.out.print("Enter the element in the source column: ");
                 element = input.next();
-                System.out.print("Enter the target column: ");
+                //System.out.print("Enter the target column: ");
                 target = input.next();
                 makeSelection();
                 printAll();
-                System.out.print("Press y to continue, x to exit: ");
-                end = input.next();
+                //System.out.print("Press y to continue, x to exit: ");
+                //end = input.next();
             }
             catch(IllegalArgumentException ex){
                 System.out.println(ex.getMessage());
             }
             
-        }while(!end.equals("x"));
+        }while(!target.equals("x"));
         
     }
 
