@@ -1,4 +1,4 @@
-# freecell
+# Simple FreeCell
 This game is a simplified version of FreeCell for university assignment.
 
 The game supports the following 3 commands:
