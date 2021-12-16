@@ -12,4 +12,4 @@ Clone this repo and run Java code/TestFreecell.java file on cmd/terminal
 
 # Sample image of this game
 
-<img src="Img/sample_run.png">
+<img src="img/sample_run.png">
